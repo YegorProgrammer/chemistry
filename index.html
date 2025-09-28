@@ -39,6 +39,54 @@
             line-height: 1.7;
         }
 
+        /* --- Блок авторства --- */
+        .authorship-block {
+            padding: 15px 20px;
+            background-color: var(--paper-bg);
+            box-shadow: var(--paper-shadow);
+            border: 1px solid #e0d9cd;
+            border-radius: 5px;
+            max-width: 400px;
+            margin: 0 auto 40px auto; /* Центрирование и нижний отступ */
+            
+            /* Анимация появления */
+            opacity: 0; 
+            animation: fadeInDown 1s ease-out 0.5s forwards;
+        }
+
+        .authorship-block .authorship-title {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: #7a6a58;
+            margin-bottom: 10px;
+            border-bottom: 1px solid var(--color-line);
+            padding-bottom: 5px;
+        }
+
+        .authorship-block ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .authorship-block li {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 5px;
+        }
+        
+        /* Ключевые кадры для анимации появления */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -236,6 +284,16 @@
 <body>
 
     <div class="container">
+    
+        <div class="authorship-block">
+            <p class="authorship-title">Подготовили ученики 8А класса КФМЛ:</p>
+            <ul>
+                <li>Хохряков Егор</li>
+                <li>Обухов Роберт</li>
+                <li>Пономарёв Платон</li>
+            </ul>
+        </div>
+
         <header>
             <h1>Письма во времени</h1>
             <p>Великая история атомно-молекулярного учения, рассказанная его творцами</p>
